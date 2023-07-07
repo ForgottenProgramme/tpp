@@ -10,12 +10,13 @@ print(f"Losses= {losses}, Wins= {wins}, Ties= {ties}")
 while True:
     print("Choose 'Rock', 'Paper', 'Scissors' or 'Quit'.")
     user_choice= input()
+    if user_choice=="quit":
+        sys.exit()
+
     print(f"{user_choice} versus...")
     computer_choice= random.choice(choices)
     print(computer_choice)
-
-    if user_choice=="quit":
-        sys.exit()
+    
     if user_choice==computer_choice:
         ties+=1
         print("It's a tie.")
